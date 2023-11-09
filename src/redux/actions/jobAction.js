@@ -16,7 +16,7 @@ import {
 export const jobLoadAction = (pageNumber, keyword = '', cat = '', location = '') => async (dispatch) => {
     dispatch({ type: JOB_LOAD_REQUEST });
     try {
-        const { data } = await axios.get(`/api/jobs/show/?pageNumber=${pageNumber}&keyword=${keyword}&cat=${cat}&location=${location}`)
+        const { data } = await axios.get(`https://mernbackend-91l7.onrender.com/api/jobs/show/?pageNumber=${pageNumber}&keyword=${keyword}&cat=${cat}&location=${location}`)
         dispatch({
             type: JOB_LOAD_SUCCESS,
             payload: data
@@ -33,7 +33,7 @@ export const jobLoadAction = (pageNumber, keyword = '', cat = '', location = '')
 export const jobLoadSingleAction = (id) => async (dispatch) => {
     dispatch({ type: JOB_LOAD_SINGLE_REQUEST });
     try {
-        const { data } = await axios.get(`/api/job/${id}`);
+        const { data } = await axios.get(`https://mernbackend-91l7.onrender.com/api/job/${id}`);
         dispatch({
             type: JOB_LOAD_SINGLE_SUCCESS,
             payload: data
@@ -51,7 +51,7 @@ export const registerAjobAction = (job) => async (dispatch) => {
     dispatch({ type: REGISTER_JOB_REQUEST })
 
     try {
-        const { data } = await axios.post("/api/job/create", job)
+        const { data } = await axios.post("https://mernbackend-91l7.onrender.com/api/job/create", job)
         dispatch({
             type: REGISTER_JOB_SUCCESS,
             payload: data
