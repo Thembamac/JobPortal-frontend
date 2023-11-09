@@ -14,7 +14,7 @@ import {
 export const jobTypeLoadAction = () => async (dispatch) => {
     dispatch({ type: JOB_TYPE_LOAD_REQUEST });
     try {
-        const { data } = await axios.get('/api/type/jobs');
+        const { data } = await axios.get('https://mernbackend-91l7.onrender.com/api/type/jobs');
         dispatch({
             type: JOB_TYPE_LOAD_SUCCESS,
             payload: data
@@ -33,7 +33,7 @@ export const createJobTypeAction = (jobtype) => async (dispatch) => {
     dispatch({ type: CREATE_JOB_TYPE_REQUEST })
 
     try {
-        const { data } = await axios.post("/api/type/create", jobtype)
+        const { data } = await axios.post("https://mernbackend-91l7.onrender.com/api/type/create", jobtype)
         dispatch({
             type: CREATE_JOB_TYPE_SUCCESS,
             payload: data
