@@ -58,5 +58,5 @@
   "devDependencies": {
     "@redux-devtools/extension": "^3.2.5"
   },
-  "proxy": "https://mernbackend-91l7.onrender.com"
+  "proxy": "https://membackend-91l7.onrender.com"
 }
