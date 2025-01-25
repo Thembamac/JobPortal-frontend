@@ -1,23 +1,32 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { useTheme } from '@mui/material/styles';
 
 const Footer = () => {
-    const { palette } = useTheme();
-    return (
-        <>
-            <Box sx={{
-                height: '70px',
-                bgcolor: palette.secondary.midNightBlue,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
-                <Box component='span' sx={{ color: palette.primary.main }}>G1 Vision | All rights reserved! 2025.</Box>
-
-            </Box>
-        </>
-    )
+   const { palette } = useTheme();
+   return (
+       <Box sx={{
+           height: '40px',
+           bgcolor: palette.secondary.midNightBlue,
+           display: 'flex',
+           justifyContent: 'center',
+           alignItems: 'center',
+           bottom: 0,
+           left: 0,
+           right: 0
+       }}>
+           <Typography 
+               variant="body2" 
+               sx={{ 
+                   color: palette.primary.main,
+                   fontSize: '12px',
+                   fontWeight: 700
+               }}
+           >
+               © 2025 G1 Vision. All rights reserved
+           </Typography>
+       </Box>
+   )
 }
 
 export default Footer
