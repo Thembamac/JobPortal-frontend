@@ -11,9 +11,12 @@ const Footer = () => {
            display: 'flex',
            justifyContent: 'center',
            alignItems: 'center',
+           position: 'fixed', 
            bottom: 0,
            left: 0,
-           right: 0
+           right: 0,
+           width: '100%',
+           zIndex: 1000
        }}>
            <Typography 
                variant="body2" 
